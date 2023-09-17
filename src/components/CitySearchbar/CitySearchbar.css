@@ -1,0 +1,37 @@
+.searchbar-container {
+    z-index: 2;
+    width: 60%;
+    background-color: white;
+    position: absolute;
+    bottom: 50vh;
+    height: 10%;
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.05);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 25px;
+}
+
+.city-dropdown {
+    width: 50%;
+    color: #CED3D8;
+    border-color: #CED3D8;
+    height: 50%;
+    border-radius: 12px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.city-search-button {
+    width: 35%;
+    height: 50%;
+    background-color: #3A5295;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+}
+

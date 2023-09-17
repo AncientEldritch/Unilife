@@ -1,0 +1,47 @@
+
+.top-cities-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.top-cities-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10% 0;
+}
+
+.top-cities-title {
+    font-size: 36px;
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+
+.city-card-container {
+    width: 40vh;
+    height: 30vh;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    position: relative;
+}
+
+.city-name {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.property-count {
+    font-size: 20px;
+}
+
+city-card-container::before {
+    position: absolute;
+    filter: blur(1px) brightness(0.5);
+    background-image: inherit;
+}

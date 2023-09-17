@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue&family=Inter:wght@400;700&family=Roboto:wght@300&display=swap');
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -20,7 +23,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: 'Epilogue', sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -47,4 +50,6 @@ table {
 	border-spacing: 0;
 }
 
+
 /*End Reset*/
+
