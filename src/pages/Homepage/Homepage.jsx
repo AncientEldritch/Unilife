@@ -51,8 +51,28 @@ function Homepage() {
               )
             })
           }
-          
+        
         </div>
+      </div>
+      <div className="compare-container">
+        <h1 className="compare-container-title">Compare all inclusive student homes.</h1>
+        <div className="compare-card-container">
+          <div className="compare-card">
+            <img className="compare-image" src="../src/assets/travel.png"></img>
+            <p className="compare-title">Search</p>
+            <p className="compare-blurb">Find your dream home in the perfect area near your university.</p>
+          </div>
+          <div className="compare-card">
+            <img className="compare-image" src="../src/assets/rule.png"></img>
+            <p className="compare-title">Compare</p>
+            <p className="compare-blurb">Compare student accommodation to find the right home for you.</p>
+          </div>
+          <div className="compare-card">
+            <img className="compare-image" src="../src/assets/receipt.png"></img>
+            <p className="compare-title">Bills Included</p>
+            <p className="compare-blurb">Bills are included in all rent prices. No hidden fees.</p>
+          </div>
+      </div>
       </div>
     </div>
   )
