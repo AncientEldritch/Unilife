@@ -3,6 +3,7 @@ import './Homepage.css'
 import Slider from '../../components/Slider/Slider'
 import CitySearchbar from '../../components/CitySearchbar/CitySearchbar'
 import axios from 'axios'
+import Footer from '../../components/Footer/Footer'
 
 function Homepage() {
   //setting state for my array of cities and for the drop down to select a city
@@ -74,6 +75,27 @@ function Homepage() {
           </div>
       </div>
       </div>
+      <div className="search-and-compare-container">
+        <div className="search-and-compare-left-container">
+          <div className="search-and-compare-left-box">
+            <img src="../src/assets/real-estate.png" alt="An icon of a hand holding a house" className="search-and-compare-image" />
+            <div className="search-and-compare-text">
+              <p className="search-and-compare-title">Best Selection</p>
+              <p className="search-and-compare-blurb">Best selection of student accommodations. Never been easier to find a home that’s right for you.</p>
+            </div>
+          </div>
+          <div className="search-and-compare-left-box">
+            <img src="../src/assets/favorite.png" alt="" className="search-and-compare-image" />
+            <div className="search-and-compare-text">
+              <p className="search-and-compare-title">Your Favorite</p>
+              <p className="search-and-compare-blurb">Shortlist your favourite properties and send enquiries in one click.</p>
+            </div>
+          </div>
+          <button className="search-and-compare-button" onClick={() => {window.scrollTo(0,0)}}>Search & Compare</button>
+        </div>
+        <img src="../src/assets/texting.png" alt="" className="man-texting-image" />
+      </div>
+      <Footer />
     </div>
   )
 }

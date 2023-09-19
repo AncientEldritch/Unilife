@@ -1,0 +1,15 @@
+.top-footer-container  {
+    background-color: #00A2E1;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+}
+
+.top-footer-container-left {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    color: white;
+    width: 50%;
+}
