@@ -1,7 +1,13 @@
 import React from 'react'
 import './Footer.css'
+import axios from 'axios'
 
 function Footer() {
+
+    const onEnter = () => {
+
+    }
+
   return (
     <div className="footer-container">
         <div className="top-footer-container">
@@ -14,15 +20,15 @@ function Footer() {
                 <p className="footer-title">Let's Socialize</p>
                 <div className="socials-container">
                     <div className="socials">
-                        <img src="" alt="" className="socials-icon" />
+                        <img src="../src/assets/Facebook.png" alt="" className="socials-icon" />
                         <p className="socials-text">Facebook</p>
                     </div>
                     <div className="socials">
-                        <img src="" alt="" className="socials-icon" />
+                        <img src="../src/assets/twitter.png" alt="twitter icon" className="socials-icon" />
                         <p className="socials-text">Twitter</p>
                     </div>
                     <div className="socials">
-                        <img src="" alt="" className="socials-icon" />
+                        <img src="../src/assets/instagram.png" alt="instagram logo" className="socials-icon" />
                         <p className="socials-text">Instagram</p>
                     </div>
                 </div>
