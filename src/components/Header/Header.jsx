@@ -8,7 +8,7 @@ function Header() {
     <div className="header-container">
         <div className="left-header-container">
             <BsHouseDoor className="header-icon" />
-            <p className="unilife-header-title">UniLife</p>
+            <Link to="/" className="unilife-header-title">UniLife</Link>
         </div>
         <div className="right-header-container">
             <div className="header-link-container">

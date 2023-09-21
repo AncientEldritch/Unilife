@@ -146,3 +146,16 @@
     font-size: 20px;
     border-radius: 12px;
 }
+
+.see-all-cities-button {
+    width: 10%;
+    margin-left: 45%;
+    border: none;
+    padding: 15px;
+    height: 50px;
+    background-color: #3A5295;
+    color: white;
+    font-size: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+}

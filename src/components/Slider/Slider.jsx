@@ -12,6 +12,9 @@ function Slider() {
     if (pageViewing  === '/') {
         sliderHeading = "Find student homes with bills included";
         sliderText =  "A simple and faster way to search for student accommodation";
+    } else if (pageViewing === '/citydetails') {
+        sliderHeading =  "Search Accomodation"
+        sliderText = "Whatever you’re after, we can help you find the right student accommodation for you. "
     } else {
         sliderHeading = "Where are you?"
         sliderText = "Are you lost??"

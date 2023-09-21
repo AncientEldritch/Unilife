@@ -4,6 +4,7 @@ import Slider from '../../components/Slider/Slider'
 import CitySearchbar from '../../components/CitySearchbar/CitySearchbar'
 import axios from 'axios'
 import Footer from '../../components/Footer/Footer'
+import { Link } from 'react-router-dom'
 
 function Homepage() {
   //setting state for my array of cities and for the drop down to select a city
@@ -37,6 +38,7 @@ function Homepage() {
         setCityList={setCityList} 
         handleCityChange={handleCityChange} />
       </div>
+     
       <div className="top-cities-container">
         <p className="top-cities-title">Student accomodations in our top cities</p>
         <div className="top-cities-cards-container">
@@ -55,6 +57,7 @@ function Homepage() {
         
         </div>
       </div>
+      <Link to ="/citydetails"  className="see-all-cities-button">See All Cities</Link>
       <div className="compare-container">
         <h1 className="compare-container-title">Compare all inclusive student homes.</h1>
         <div className="compare-card-container">

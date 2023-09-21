@@ -28,3 +28,8 @@
     display: flex;
     gap: 10px;
 }
+
+.unilife-header-title {
+    text-decoration: none;
+    color: inherit;
+}
