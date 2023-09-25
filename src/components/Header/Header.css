@@ -11,6 +11,8 @@
 .header-link {
     text-decoration: none;
     color: inherit;
+    border: none;
+    background-color: transparent;
 }
 
 .left-header-container {

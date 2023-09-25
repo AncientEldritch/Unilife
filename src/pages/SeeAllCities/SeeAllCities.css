@@ -1,0 +1,30 @@
+.search-by-city-container{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-by-city-title {
+    font-size: 36px;
+    padding-bottom: 5%;
+}
+
+.city-buttons-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5%;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.city-button {
+    margin: 10%;
+    width: 30vh;
+    height: 10vh;
+    background-color: transparent;
+    border: 1px solid #CED3D8;
+    border-radius: 12px;
+    font-size: 28px;
+    font-weight: bold;
+}

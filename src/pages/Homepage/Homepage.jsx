@@ -57,7 +57,7 @@ function Homepage() {
         
         </div>
       </div>
-      <Link to ="/citydetails"  className="see-all-cities-button">See All Cities</Link>
+      <Link to ="/allcities"  className="see-all-cities-button">See All Cities</Link>
       <div className="compare-container">
         <h1 className="compare-container-title">Compare all inclusive student homes.</h1>
         <div className="compare-card-container">

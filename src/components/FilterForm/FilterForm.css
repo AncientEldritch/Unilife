@@ -1,0 +1,28 @@
+.filter-form-container {
+    z-index: 2;
+    width: 85%;
+    background-color: white;
+    position: absolute;
+    bottom: 40vh;
+    height: 15%;
+    box-shadow: 0 10px 10px rgb(0, 0, 0, 0.05);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 25px;
+}
+
+.filter-title {
+    font-size: 24px;
+}
+
+.filter-dropdown {
+    width: 25vh;
+   height: 48px;
+   border: 1px solid #CED3D8;
+   border-radius: 12px;
+   padding-left: 5%;
+   color:#CED3D8
+}
