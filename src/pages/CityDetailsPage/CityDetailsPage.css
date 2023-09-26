@@ -1,0 +1,11 @@
+.property-count {
+    margin: 10% 8% 5% 8%;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.property-cards-container {
+    margin: 0 8%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}

@@ -4,9 +4,14 @@ import Slider from '../../components/Slider/Slider'
 import CitySearchbar from '../../components/CitySearchbar/CitySearchbar'
 import axios from 'axios'
 import Footer from '../../components/Footer/Footer'
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 
 function Homepage() {
+  const navigate = useNavigate();
+  const cityButtonClick = ((city) => {
+    navigate(`/city/${city._id}`)
+  })
+
   //setting state for my array of cities and for the drop down to select a city
   const [cityList, setCityList] = useState([]);
   const [selectedCity, setSelectedCity] = useState('');
@@ -45,7 +50,7 @@ function Homepage() {
           {
             topCities.map((city) => {
               return (
-                <button style={{backgroundImage: `url('${city.image_url}')`}} key={city._id} className="city-card-container">
+                <button onClick={() => cityButtonClick(city)}style={{backgroundImage: `url('${city.image_url}')`}} key={city._id} className="city-card-container">
                   <div  className="card-background-image">
                     <p className="city-name">{city.name}</p>
                     <p className="property-count">{city.property_count} properties</p>

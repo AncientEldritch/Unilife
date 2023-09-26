@@ -4,7 +4,7 @@ import './CityDetailsPage.css'
 import Slider from '../../components/Slider/Slider'
 import axios from 'axios';
 import FilterForm  from "../../components/FilterForm/FilterForm"
-
+import PropertyCard from '../../components/PropertyCard/PropertyCard';
 
 
 function CityDetailsPage() {
@@ -23,6 +23,8 @@ function CityDetailsPage() {
   console.log()
   }, [city_id])
 
+  const city = properties.length > 0 ? properties[0].address.city : '';
+
   return (
 
     
@@ -32,7 +34,15 @@ function CityDetailsPage() {
         <Slider />
         <FilterForm />
       </div>
-      
+      <p className="property-count">{properties.length} homes in {city}</p>
+      <div className="property-cards-container">
+        {
+          properties.map((property) => {
+            return (
+            <PropertyCard key={property._id} property={property} /> )
+          })
+        }
+      </div>
     </div>
   )
 }

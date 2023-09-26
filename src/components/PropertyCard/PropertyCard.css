@@ -1,0 +1,84 @@
+.property-image {
+    width: 35vh;
+   border-radius: 12px 12px 0 0;
+}
+
+.top-details {
+    background-color: #3A5295;
+    display: flex;
+    gap: 25%;
+    width: 35vh;
+    padding: 5% 0;
+}
+
+.property-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+    border: 1px solid #CED3D8;
+    border-radius: 12px;
+    width: 35vh;
+}
+
+.bed-bath {
+    display: flex;
+    gap: 20%;
+}
+
+.bed-bath-count {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 16px;
+    color: white;
+}
+
+.price {
+    color: white;
+    margin-left: 5%;
+}
+
+.property-price {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.including-bills {
+    font-size: 12px;
+}
+
+.type-and-furnished {
+    display: flex;
+    justify-content: space-between;
+    width: 35vh;
+    font-size: 16px;
+    margin-top: 5%;
+}
+
+.property-type {
+    margin-left: 5%;
+}
+
+.furnished {
+    margin-right: 5%;
+}
+
+.address-container {
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    gap: 5px;
+    margin: 5%;
+    font-weight: bold;
+}
+
+.house-details-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5%;
+    border-top: 1px solid #CED3D8;
+}
