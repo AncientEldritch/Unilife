@@ -3,7 +3,7 @@ import './CitySearchbar.css'
 import axios from 'axios'
 
     
-function CitySearchbar({cityList, setCityList, handleCityChange}) {
+function CitySearchbar({navigate, cityList, handleCityChange}) {
 
     
 

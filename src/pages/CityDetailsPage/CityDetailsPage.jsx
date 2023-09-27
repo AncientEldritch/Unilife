@@ -5,12 +5,14 @@ import Slider from '../../components/Slider/Slider'
 import axios from 'axios';
 import FilterForm  from "../../components/FilterForm/FilterForm"
 import PropertyCard from '../../components/PropertyCard/PropertyCard';
+import Footer from '../../components/Footer/Footer';
 
 
 function CityDetailsPage() {
 
   const { city_id } = useParams();
   const [properties, setProperties] = useState([]);
+  const [currentCity, setCurrentCity] = useState({});
 
   useEffect(() => {
     console.log(city_id);
@@ -20,10 +22,17 @@ function CityDetailsPage() {
   }).catch (err => {
       console.log(err)
   })
-  console.log()
   }, [city_id])
 
-  const city = properties.length > 0 ? properties[0].address.city : '';
+  useEffect(() => {
+    console.log(city_id);
+    axios.get(`https://unilife-server.herokuapp.com/cities/${city_id}`).then((res) => {
+      setCurrentCity(res.data.data[0])
+      console.log(res.data.data[0])
+  }).catch (err => {
+      console.log(err)
+  })
+  }, [city_id])
 
   return (
 
@@ -34,7 +43,11 @@ function CityDetailsPage() {
         <Slider />
         <FilterForm />
       </div>
-      <p className="property-count">{properties.length} homes in {city}</p>
+      {currentCity.name ? (
+  <p className="property-count">{properties.length} homes in {currentCity.name}</p>
+) : (
+  <p>Loading...</p>
+)}
       <div className="property-cards-container">
         {
           properties.map((property) => {
@@ -43,6 +56,18 @@ function CityDetailsPage() {
           })
         }
       </div>
+      <div className="city-blurb-container">
+        <div className="city-blurb-text">
+          <h1 className="student-in">Being a student in {currentCity.name}</h1>
+          <p className="city-blurb-paragraph">
+            <p>{currentCity.student_life}</p>
+            
+            <p>{currentCity.universities}</p>
+          </p>
+        </div>
+        <img src="../src/assets/student-life.png" alt="" className="city-blurb-image" />
+      </div>
+      <Footer />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 .property-image {
-    width: 35vh;
+    width: 100%;
    border-radius: 12px 12px 0 0;
 }
 
@@ -7,17 +7,18 @@
     background-color: #3A5295;
     display: flex;
     gap: 25%;
-    width: 35vh;
+    width: 100%;
     padding: 5% 0;
 }
 
 .property-card {
     display: flex;
     flex-direction: column;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
+
     border: 1px solid #CED3D8;
     border-radius: 12px;
-    width: 35vh;
+    width: 100%;
 }
 
 .bed-bath {
@@ -50,7 +51,7 @@
 .type-and-furnished {
     display: flex;
     justify-content: space-between;
-    width: 35vh;
+    width: 100%;
     font-size: 16px;
     margin-top: 5%;
 }

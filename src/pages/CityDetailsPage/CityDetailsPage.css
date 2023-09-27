@@ -1,11 +1,40 @@
 .property-count {
-    margin: 10% 8% 5% 8%;
+    margin: 10% 5% 5% 5%;
     font-size: 36px;
     font-weight: bold;
 }
 
 .property-cards-container {
-    margin: 0 8%;
+    margin: 0 5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+}
+
+
+.city-blurb-container {
+    display: flex;
+    margin: 5% 5%;
+    background-color: #F6FAFD;
+    padding: 5%;
+    border-radius: 12px;
+}
+
+.city-blurb-text {
+   display: flex;
+   flex-direction: column;
+   gap: 10%;
+   margin-right: 5%;
+   margin-top: 15px;
+}
+
+.student-in {
+    font-size: 36px;
+}
+
+.city-blurb-paragraph {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    line-height: 1.5;
 }

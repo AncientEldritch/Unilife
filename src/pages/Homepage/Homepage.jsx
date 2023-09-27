@@ -41,7 +41,8 @@ function Homepage() {
         <CitySearchbar 
         cityList={cityList} 
         setCityList={setCityList} 
-        handleCityChange={handleCityChange} />
+        handleCityChange={handleCityChange} 
+        navigate={navigate}/>
       </div>
      
       <div className="top-cities-container">
