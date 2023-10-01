@@ -35,3 +35,78 @@
     text-decoration: none;
     color: inherit;
 }
+
+.ReactModalPortal {
+    position: relative;
+    z-index:  3;
+    
+}
+
+.modal-top {
+    font-size: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2%;
+    margin: 0 5%;
+}
+
+.contact-us-form {
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+    gap: 5%;
+    font-size: 24px;
+}
+
+.contact-us-text {
+    margin: 0 5%;
+    text-align: left;
+    width: 55%;
+    line-height: 1.5;
+}
+
+.contact-us-left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 15px;
+}
+
+.contact-us-right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 15px;
+}
+
+.input {
+    height: 5vh;
+    border: 1px solid #CED3D8;
+    border-radius: 12px;
+    font-size: 24px;
+    padding-left: 12px;
+    color: #CED3D8;
+}
+
+
+.input-message {
+    height: 15vh;
+    padding-top: 15px;
+    font-family: 'Epilogue', sans-serif;
+}
+
+.contact-us-submit {
+    height: 5vh;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    background-color: #3A5295;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+}
+

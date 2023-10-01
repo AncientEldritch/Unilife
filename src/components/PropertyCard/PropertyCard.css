@@ -6,16 +6,16 @@
 .top-details {
     background-color: #3A5295;
     display: flex;
-    gap: 25%;
-    width: 100%;
+    max-width: 100%;
     padding: 5% 0;
+    justify-content: space-between;
+
 }
 
 .property-card {
     display: flex;
     flex-direction: column;
     margin-bottom: 10%;
-
     border: 1px solid #CED3D8;
     border-radius: 12px;
     width: 100%;
@@ -24,6 +24,7 @@
 .bed-bath {
     display: flex;
     gap: 20%;
+    margin-right: 10%;
 }
 
 .bed-bath-count {
@@ -83,3 +84,4 @@
     padding: 5%;
     border-top: 1px solid #CED3D8;
 }
+

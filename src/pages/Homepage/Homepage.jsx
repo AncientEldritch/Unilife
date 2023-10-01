@@ -19,6 +19,7 @@ function Homepage() {
   const handleCityChange = (event) => {
       const cityName = event.target.value;
       setSelectedCity(cityName);
+      console.log(cityName)
   };
   //get array of all cities from API
   useEffect(() => {
@@ -42,7 +43,8 @@ function Homepage() {
         cityList={cityList} 
         setCityList={setCityList} 
         handleCityChange={handleCityChange} 
-        navigate={navigate}/>
+        navigate={navigate}
+        selectedCity={selectedCity}/>
       </div>
      
       <div className="top-cities-container">

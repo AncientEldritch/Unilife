@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import { BsHouseDoor } from 'react-icons/bs'
 
 function PropertyCard({property}) {
+
+
   return (
     <div className="property-card">
         <img className="property-image" src={property.images[0]}/>
@@ -32,7 +34,7 @@ function PropertyCard({property}) {
                     <img src="../src/assets/location.png" alt="location logo" />
                     <p className="address">{property.address.street}, {property.address.city} {property.address.postcode}</p>
                 </div>
-                <Link to="" className="house-details-link">
+                <Link to={`/property/${property?._id}`} className="house-details-link">
                     <BsHouseDoor />
                     <p className="view-home">View Home</p>
                 </Link>

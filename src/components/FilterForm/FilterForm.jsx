@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react'
 import './FilterForm.css'
 import axios from 'axios'
 
-function FilterForm() {
+function FilterForm({ onBedroomChange, onBathroomChange, onPriceChange, onTypeChange, bedroom, bathroom, price, type }) {
     const [allPropertyTypes, setAllPropertyTypes] = useState([]);
     useEffect(() => {
         axios.get("https://unilife-server.herokuapp.com/propertyTypes").then((res) => {
@@ -17,8 +17,8 @@ function FilterForm() {
     <div className="filter-form-container">
         <div className="filter-option">
             <div className="filter-title">Min Bedroom</div>
-            <select onChange=" " value="anyBedroom" className="filter-dropdown">
-                <option value="anyBedroom" disabled>Any Bedroom</option>
+            <select onChange={onBedroomChange} value={bedroom} className="filter-dropdown">
+                <option value="" disabled>Any Bedroom</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -32,8 +32,8 @@ function FilterForm() {
         </div>
         <div className="filter-option">
             <div className="filter-title">Min Bathroom</div>
-            <select onChange="" value="anyBathoom" className="filter-dropdown">
-                <option value="anyBathroom">Any Bathoom</option>
+            <select onChange={onBathroomChange} value={bathroom} className="filter-dropdown">
+                <option value="">Any Bathoom</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -41,8 +41,8 @@ function FilterForm() {
         </div>
         <div className="filter-option">
             <div className="filter-title">Max Price</div>
-            <select onChange="" value="anyPrice" className="filter-dropdown">
-                <option value="anyPrice" >Any Price</option>
+            <select onChange={onPriceChange} value={price} className="filter-dropdown">
+                <option value="" >Any Price</option>
                 <option value="600">€600</option>
                 <option value="800">€800</option>
                 <option value="900">€900</option>
@@ -54,8 +54,8 @@ function FilterForm() {
         </div>
         <div className="filter-option">
             <div className="filter-title">Home Type</div>
-            <select  onChange="" value="anyType" className="filter-dropdown">
-                <option value="anyType">Any Type</option>
+            <select  onChange={onTypeChange} value={type} className="filter-dropdown">
+                <option value="">Any Type</option>
                 {
                     allPropertyTypes.map((type) => {
                     return (

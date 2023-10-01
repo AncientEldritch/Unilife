@@ -13,8 +13,14 @@ const customStyles = {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
-      zIndex: '4',
+      height: '65%',
+      width: '60%',
+      border: 'none',
+      borderRadius: '12px',
     },
+    overlay: {
+      background: 'rgba(0, 0, 0, 0.5)',
+    }
   };
 
   Modal.setAppElement(document.getElementById('root'));
@@ -22,7 +28,6 @@ const customStyles = {
 function Header() {
 
     //Start modal
-    let subtitle =  '';
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
   function openModal() {
@@ -31,7 +36,7 @@ function Header() {
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
+    
   }
 
  
@@ -48,18 +53,35 @@ function Header() {
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         style={customStyles}
-        contentLabel="Example Modal"
+        contentLabel="Contact Us"
       >
-        <h2>Hello</h2>
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
+        <div className="modal-top">
+          <h2 className="contact-us-title">Contact Us</h2>
+          <img src="../src/assets/mailbox.png" alt="icon of a mailbox" className="contact-us-mailbox" />
+        </div>
+        <p className="contact-us-text">Feel free to contact us if you have any questions. <br /> Looking forward to hear from you.</p>
+        <form className="contact-us-form">
+          <div className="contact-us-left">
+            <label for="name">First name:</label>
+            <input type="text" className="input input-text" name="name" placeholder='Enter your name'/>
+            <label for="phone-number">Phone Number:</label>
+            <input type="tel" className="input input-text" name="phone-number" placeholder='Enter your phone number'/>
+            <label for="affiliation">Are you a...</label>
+            <select className="input input-dropdown" name="affiliation" defaultValue="student">
+              <option value="student">Student</option>
+              <option value="owner">Property Owner</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div className="contact-us-right">
+            <label for="email">Email:</label>
+            <input type="email" className="input" name="email" placeholder='Enter your email address'/>
+            <label for="message">Message:</label>
+            <textarea className="input input-message" name="message" placeholder='Enter your message'/>
+            <button className="contact-us-submit" onClick={closeModal}>Submit</button>
+          </div>
         </form>
+  
       </Modal>
         <div className="left-header-container">
             <BsHouseDoor className="header-icon" />
