@@ -31,7 +31,7 @@ function PropertyCard({property}) {
                     <p className="furnished">{property.furnished}</p>
                 </div>
                 <div className="address-container">
-                    <img src="../src/assets/location.png" alt="location logo" />
+                    <img className="location-icon" src="../src/assets/location.png" alt="location logo" />
                     <p className="address">{property.address.street}, {property.address.city} {property.address.postcode}</p>
                 </div>
                 <Link to={`/property/${property?._id}`} className="house-details-link">

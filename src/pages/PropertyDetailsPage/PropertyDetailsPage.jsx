@@ -21,45 +21,29 @@ function PropertyDetailsPage() {
     }, [property_id]);
   
     const images = property.images || [];
-  
-    const prevImage = () => {
-      setCurrentImage((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    };
-  
-    const nextImage = () => {
-      setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
-    };
-  
-    const visibleImages = Array.from({ length: 3 }, (_, index) => {
-      const newIndex = (currentImage + index) % images.length;
-      return images[newIndex];
-    });
+
+
 
     return (
       <div className="property-details-page">
         <div className="property-details-left">
-          <button onClick={() => { history.back() }}>Back to search</button>
-          <div className="slider-container">
+          <button className="back-button" onClick={() => { history.back() }}>{`< Back to search`}</button>
+          <div className="image-slider-container">
             <div className="larger-image-container">
               {images[currentImage] && <img src={images[currentImage]} alt="larger" className="larger-image" />}
             </div>
-            <button onClick={prevImage} className="slider-arrow left-arrow">
-              {'<'}
-            </button>
             <div className="smaller-images-container">
-              {visibleImages.map((image, index) => (
+              {images.map((image, index) => (
                 <img
                   key={image}
                   src={image}
-                  alt={`image-${index}`}
-                  className={'smaller-image'}
-                  onClick={() => setCurrentImage((currentImage + index) % images.length)}
+                  alt={`property image-${index}`}
+                  className='smaller-image'
+                  onClick={() => setCurrentImage(index)}
                 />
               ))}
             </div>
-            <button onClick={nextImage} className="slider-arrow right-arrow">
-              {'>'}
-            </button>
+            
           </div>
           <div className="property-description-container">
             <p className="property-page-title">Description</p>
@@ -68,7 +52,7 @@ function PropertyDetailsPage() {
           <div className="key-features-container">
             <p className="property-page-title">Key Features</p>
             {property?.key_features?.map((feature, index) => (
-                <div key={index} className="single-deature-container">
+                <div key={index} className="single-feature-container">
                     <p className="check-mark">✓</p>
                     <p className="feature">{feature}</p>
                 </div>
@@ -77,21 +61,21 @@ function PropertyDetailsPage() {
         </div>
         <div className="property-details-right">
             <div className="main-details-container">
-                <p className="address">
+                <p className="details-address">
                     {`${property?.address?.street}, ${property?.address?.city}, ${property?.address?.postcode}`}
                 </p>
                 <div className="specific-details-container">
                     <div className="detail-container">
                         <p className="detail-title">Bedrooms</p>
                         <div className="pulled-detail-container">
-                            <img src="../src/assets/bed.png" />
+                            <img className="details-icon" src="../src/assets/blue-bed.png" />
                             <p>{property?.bedroom_count}</p>
                         </div>
                     </div>
                     <div className="detail-container">
                         <p className="detail-title">Bathrooms</p>
                         <div className="pulled-detail-container">
-                            <img src="../src/assets/bathtub.png" />
+                            <img src="../src/assets/blue-bathtub.png" />
                             <p>{property?.bathroom_count}</p>
                         </div>
                     </div>
@@ -131,9 +115,9 @@ function PropertyDetailsPage() {
                 <div className="bedroom-prices-container">
                     <p className="property-page-title">Bedroom Prices</p>
                     <div className="bedroom-prices">
-                        {Object.keys(property?.bedroom_prices).map((bedroom, index) => (
+                        {property.bedroom_prices && Object.keys(property.bedroom_prices).map((bedroom, index) => (
                             <div key={index} className="bedroom-price">
-                                <p className="bedroom-number">{bedroom.replace('_', ' ')}</p>
+                                <p className="bedroom-number">Bedroom {index+1}</p>
                                 <p className="individual-price">£{property.bedroom_prices[bedroom]}</p>
                             </div>
                         ))}

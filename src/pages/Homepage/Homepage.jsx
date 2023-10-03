@@ -106,7 +106,6 @@ function Homepage() {
         </div>
         <img src="../src/assets/texting.png" alt="" className="man-texting-image" />
       </div>
-      <Footer />
     </div>
   )
 }

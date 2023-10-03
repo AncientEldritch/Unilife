@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Slider from '../../components/Slider/Slider';
-import Footer from '../../components/Footer/Footer';
 import "./SeeAllCities.css";
 
 function SeeAllCities() {
@@ -36,7 +35,7 @@ function SeeAllCities() {
                 {city.name}</button> ))}
             </div>
         </div>
-        <Footer />
+        
     </div>
   );
 }

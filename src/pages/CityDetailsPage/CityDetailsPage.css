@@ -37,4 +37,6 @@
     flex-direction: column;
     gap: 5vh;
     line-height: 1.5;
+    margin-top: 24px;
 }
+
