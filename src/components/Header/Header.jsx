@@ -13,7 +13,7 @@ const customStyles = {
       bottom: 'auto',
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
-      height: '65%',
+      height: '70%',
       width: '60%',
       border: 'none',
       borderRadius: '12px',
@@ -56,12 +56,12 @@ function Header() {
         contentLabel="Contact Us"
       >
         <div className="modal-top">
-          <h2 className="contact-us-title">Contact Us</h2>
-          <img src="../src/assets/mailbox.png" alt="icon of a mailbox" className="contact-us-mailbox" />
+          <h2 className="modal-title">Contact Us</h2>
+          <img src="../src/assets/mailbox.png" alt="icon of a mailbox" />
         </div>
-        <p className="contact-us-text">Feel free to contact us if you have any questions. <br /> Looking forward to hear from you.</p>
-        <form className="contact-us-form">
-          <div className="contact-us-left">
+        <p className="modal-text">Feel free to contact us if you have any questions. <br /> Looking forward to hear from you.</p>
+        <form className="modal-form">
+          <div className="modal-left">
             <label for="name">First name:</label>
             <input type="text" className="input input-text" name="name" placeholder='Enter your name'/>
             <label for="phone-number">Phone Number:</label>
@@ -73,12 +73,12 @@ function Header() {
               <option value="other">Other</option>
             </select>
           </div>
-          <div className="contact-us-right">
+          <div className="modal-right">
             <label for="email">Email:</label>
             <input type="email" className="input" name="email" placeholder='Enter your email address'/>
             <label for="message">Message:</label>
             <textarea className="input input-message" name="message" placeholder='Enter your message'/>
-            <button className="contact-us-submit" onClick={closeModal}>Submit</button>
+            <button className="modal-submit" onClick={closeModal}>Submit</button>
           </div>
         </form>
   

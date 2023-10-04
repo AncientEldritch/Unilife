@@ -59,7 +59,7 @@
 .main-details-container {
     border: 1px solid #CED3D8;
     border-radius: 24px;
-    width: 45vw;
+    width: 42vw;
     margin: 4% 5%;
 }
 
@@ -72,10 +72,7 @@
     font-size: 36px;
 }
 
-.pulled-detail-container {
-    color: #3A5295;
-    font-weight: bold;
-}
+
 
 .specific-details-container {
     display: grid;
@@ -99,9 +96,68 @@
     align-items: center;
     margin-top: 20%;
     font-size: 24px;
+    color: #3A5295;
+    font-weight: bold;
 }
 
 .detail-title {
     font-size: 16px;
     font-weight: bold;
+}
+
+.details-shortlist-button {
+    width: 40%;
+    height: 6vh;
+    border-radius: 12px;
+    background-color: inherit;
+    border: solid 1px #CED3D8;
+    font-size: 24px;
+    text-align: center;
+    
+}
+
+.details-button-container {
+    margin: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+}
+
+.details-book-viewing-button {
+    width: 40%;
+    height: 6vh;
+    border-radius: 12px;
+    background-color: #3A5295;
+    border: solid 1px #CED3D8;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+   
+}
+
+.bedroom-prices {
+    border: solid 1px #CED3D8;
+    border-radius: 24px;
+    
+}
+
+.bottom-border {
+    border-bottom: solid 1px #CED3D8;
+}
+
+.bedroom-price {
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.bedroom-prices-container {
+    margin: 0 5%;
+    width: 100%;
+}
+
+.booking-submit {
+    margin-top: 10%;
 }

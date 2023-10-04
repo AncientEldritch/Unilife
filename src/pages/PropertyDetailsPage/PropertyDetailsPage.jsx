@@ -4,8 +4,55 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { BsHeart } from "react-icons/bs"
+import Modal from 'react-modal'
+
+//Modal styling
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    height: '60%',
+    width: '60%',
+    border: 'none',
+    borderRadius: '12px',
+  },
+  overlay: {
+    background: 'rgba(0, 0, 0, 0.5)',
+  }
+};
+
+Modal.setAppElement(document.getElementById('root'));
+
+
 
 function PropertyDetailsPage() {
+
+   //Start modal
+   const [modalIsOpen, setIsOpen] = React.useState(false);
+
+   function openModal() {
+     setIsOpen(true);
+   }
+ 
+   function afterOpenModal() {
+     // references are now sync'd and can be accessed.
+     
+   }
+ 
+  
+   function closeModal() {
+     setIsOpen(false);
+   }
+ 
+   //end Modal 
+ 
+
+
+
     const { property_id } = useParams();
     const [property, setProperty] = useState({});
     const [currentImage, setCurrentImage] = useState(0);
@@ -21,11 +68,45 @@ function PropertyDetailsPage() {
     }, [property_id]);
   
     const images = property.images || [];
+    
 
 
 
     return (
+
+      
       <div className="property-details-page">
+
+        <Modal
+        isOpen={modalIsOpen}
+        onAfterOpen={afterOpenModal}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Contact Us"
+      >
+        <div className="modal-top">
+          <h2 className="modal-title">Book a Viewing</h2>
+          <img src="../src/assets/booking.png" alt="icon of a mailbox" />
+        </div>
+        <p className="modal-text">{`${property?.address?.street}, ${property?.address?.city}, ${property?.address?.postcode}`}</p>
+        <form className="modal-form">
+          <div className="modal-left booking-left">
+            <label for="name">First name:</label>
+            <input type="text" className="input input-text" name="name" placeholder='Enter your name'/>
+            <label for="email">Email:</label>
+            <input type="email" className="input" name="email" placeholder='Enter your email address'/>
+            <label for="phone-number">Phone Number:</label>
+            <input type="tel" className="input input-text" name="phone-number" placeholder='Enter your phone number'/>
+          </div>
+          <div className="modal-right">
+            <label for="message">Message:</label>
+            <textarea className="input input-message" name="message" placeholder='Enter your message'/>
+            <button className="modal-submit booking-submit" onClick={closeModal}>Submit</button>
+          </div>
+        </form>
+  
+      </Modal>
+
         <div className="property-details-left">
           <button className="back-button" onClick={() => { history.back() }}>{`< Back to search`}</button>
           <div className="image-slider-container">
@@ -107,23 +188,24 @@ function PropertyDetailsPage() {
             </div>
             <div className="details-button-container">
                 <button className="details-shortlist-button">
-                    <BsHeart /> Shortlist
+                    <BsHeart /> &nbsp; Shortlist
                 </button>
-                <button className="details-book-viewing-button">
+                <button className="details-book-viewing-button" onClick={openModal}>
                     Book Viewing
                 </button>
+            </div>
                 <div className="bedroom-prices-container">
                     <p className="property-page-title">Bedroom Prices</p>
                     <div className="bedroom-prices">
                         {property.bedroom_prices && Object.keys(property.bedroom_prices).map((bedroom, index) => (
-                            <div key={index} className="bedroom-price">
+                            <div key={index} className={`bedroom-price ${index !== property.bedroom_prices.length - 1 ? 'bottom-border' : ''}`}>
                                 <p className="bedroom-number">Bedroom {index+1}</p>
                                 <p className="individual-price">£{property.bedroom_prices[bedroom]}</p>
                             </div>
                         ))}
                     </div>
-</div>
-            </div>
+                  </div>
+            
         </div>
       </div>
     

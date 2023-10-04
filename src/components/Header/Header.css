@@ -51,7 +51,7 @@
     margin: 0 5%;
 }
 
-.contact-us-form {
+.modal-form {
     display: flex;
     justify-content: space-between;
     margin: 5%;
@@ -59,21 +59,21 @@
     font-size: 24px;
 }
 
-.contact-us-text {
+.modal-text {
     margin: 0 5%;
     text-align: left;
     width: 55%;
     line-height: 1.5;
 }
 
-.contact-us-left {
+.modal-left {
     display: flex;
     flex-direction: column;
     width: 50%;
     gap: 15px;
 }
 
-.contact-us-right {
+.modal-right {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -96,7 +96,7 @@
     font-family: 'Epilogue', sans-serif;
 }
 
-.contact-us-submit {
+.modal-submit {
     height: 5vh;
     border: none;
     border-radius: 12px;
