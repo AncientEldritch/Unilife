@@ -28,7 +28,7 @@
     border-radius: 12px;
     color: white;
     position: relative;
-    z-index: 0;
+    
 }
 
 .city-name {
@@ -80,7 +80,7 @@
     align-items: center;
     padding: 2%;
     gap: 10%;
-    width: 353%;
+    
 }
 
 .compare-image {
@@ -148,15 +148,106 @@
 }
 
 .see-all-cities-button {
-    width: 10%;
-    margin-left: 45%;
-    border: none;
-    padding: 15px;
     height: 50px;
     background-color: #3A5295;
     color: white;
     font-size: 20px;
     border-radius: 12px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    margin: auto;
+    text-align: center;
 }
 
+@media (max-width:767px) {
+
+    .top-cities-title {
+        font-size: 20px;
+        margin-top: 5%;
+    }
+
+    .top-cities-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 35%;
+    }
+    
+    .city-card-container {
+        width: 30vh;
+        height: 25vh;
+    }
+
+    .see-all-cities-button {
+        width: 40%;
+    }
+
+    .compare-card-container {
+        flex-direction: column;
+        width: 75%;
+        gap: 64px;
+    }
+
+    .search-and-compare-left-box {
+        display: none;
+    }
+
+    .man-texting-image {
+        display: none;
+    }
+
+    .search-and-compare-button {
+        padding-left: 0;
+        margin: auto;
+        height: 5vh;
+        margin-bottom: 10%;
+    }
+
+    .search-and-compare-container {
+        width: 100%;
+        display: block;
+    }
+
+    .search-and-compare-left-container {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+@media (max-width:480px)  {
+
+    .top-cities-cards-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 35%;
+        margin-top: 5%;
+        gap: 1%;
+    }
+
+    .top-cities-title {
+        margin-top: 10%;
+        width: 90%;
+        text-align: center;
+    }
+
+    .compare-container-title {
+        text-align: center;
+    }
+
+    .compare-blurb {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .compare-title {
+        margin-top: 10%;
+    }
+
+    .compare-card-container {
+        width: 100%;
+    }
+
+    .search-and-compare-button {
+        width: 65%;
+    }
+}

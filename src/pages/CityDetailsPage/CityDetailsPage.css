@@ -1,4 +1,4 @@
-.property-count {
+.city-details-property-count {
     margin: 10% 5% 5% 5%;
     font-size: 36px;
     font-weight: bold;
@@ -40,3 +40,37 @@
     margin-top: 24px;
 }
 
+@media (max-width:767px) { 
+    .city-details-property-count {
+        margin-top: 20%;
+    }
+
+    .property-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 25%;
+    }
+
+    .city-blurb-container {
+        flex-direction: column;
+    }
+
+    .city-blurb-paragraph {
+        margin-bottom: 5%;
+    }
+}
+
+@media (max-width:480px)  {  
+    .city-details-property-count {
+        margin-top: 50%;
+        font-size: 24px;
+    }
+
+    .property-cards-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .city-blurb-text {
+        line-height: 1.5;
+    }
+}

@@ -41,3 +41,29 @@
     line-height: 1.5;
   }
 
+  
+
+  @media (max-width:767px) {
+    .slider-header {
+      font-size: 40px;
+      text-align: center;
+      margin-top: 10%;
+    }
+
+    .slider-text {
+      text-align: center;
+      width: 90%;
+      font-size: 20px;
+      margin-top: 5%;
+    }
+}
+
+@media (max-width:480px)  {
+    .slider-header {
+      width: 75%;
+    }
+
+    .slider-text {
+      margin-top: 5%;
+    }
+}

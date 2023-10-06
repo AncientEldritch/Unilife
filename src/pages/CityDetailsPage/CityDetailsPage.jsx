@@ -95,7 +95,7 @@ useEffect(() => {
         />
       </div>
       {currentCity.name ? (
-  <p className="property-count">{properties.length} homes in {currentCity.name}</p>
+  <p className="city-details-property-count">{properties.length} homes in {currentCity.name}</p>
 ) : (
   <p>Loading...</p>
 )}

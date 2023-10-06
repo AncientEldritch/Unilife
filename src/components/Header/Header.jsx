@@ -3,6 +3,18 @@ import './Header.css'
 import { BsHouseDoor, BsHeart, BsEnvelope } from "react-icons/bs"
 import { Link } from 'react-router-dom'
 import Modal from 'react-modal';
+import { GiHamburgerMenu } from "react-icons/gi"
+
+//hamburger menu functionality for mobile 
+
+const toggleNav = () => {
+  const navMenu = document.querySelector(".right-header-container");
+  if (navMenu.style.display === "none") {
+    navMenu.style.display = "block"
+  } else {
+    navMenu.style.display = "none"
+  }
+}
 
 //Modal styling
 const customStyles = {
@@ -97,7 +109,7 @@ function Header() {
                 <button className="header-link" onClick={() => {openModal()}}>Contact Us</button>
             </div>
         </div>
-        
+        <GiHamburgerMenu className="hamburger-menu" onClick={toggleNav} />
     </div>
   )
 }

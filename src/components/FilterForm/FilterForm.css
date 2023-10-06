@@ -26,3 +26,41 @@
    padding-left: 5%;
    color:#CED3D8
 }
+
+@media (max-width:767px) { 
+    .filter-title {
+        display: none;
+    }
+
+    .filter-form-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        bottom: 42vh;
+        align-content: center;
+        margin: auto;
+    }
+
+    .filter-option {
+        display: flex;
+        justify-content: center;
+        margin: 2% 5%;
+    }
+
+    .filter-dropdown {
+        width: 30vh;
+    }
+}
+
+@media (max-width:480px)  {  
+    .filter-form-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .filter-form-container {
+        height: 25%;
+        bottom: 35vh;
+        padding: 2% 0;
+    }
+}

@@ -35,3 +35,15 @@
     border-radius: 12px;
 }
 
+@media (max-width:767px) {
+    .searchbar-container {
+        width: 90%;
+    }
+
+}
+
+@media (max-width:480px)  {
+    .searchbar-container {
+        bottom: 48vh;
+    }
+}

@@ -110,3 +110,27 @@ label {
     font-weight: bold;
 }
 
+.hamburger-menu {
+    display: none;
+}
+
+@media (max-width:480px)  {
+    .hamburger-menu {
+        display: block;
+    }
+
+    .right-header-container {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 3;
+        padding: 2%;
+        border-radius: 0 0 0 12px;
+    }
+
+    .header-container {
+        position: relative;
+    }
+}

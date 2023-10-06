@@ -68,3 +68,40 @@
     width: 10%;
     height: 10%;
 }
+
+.curious-blurb {
+    line-height: 1.5;
+}
+
+@media (max-width:767px) {
+    .email-input {
+        height: 5%;
+    }
+
+    .bottom-footer-container-left {
+        flex-direction: column;
+    }
+
+    .bottom-footer-container-right {
+        align-items: end;
+    }
+}
+
+@media (max-width:480px)  {
+    .top-footer-container {
+        flex-direction: column;
+        height: 25%;
+        align-items: center;
+    }
+
+    .top-footer-container-left {
+       margin-top: 5%;
+        max-width: 75%;
+    }
+
+    .top-footer-container-right {
+    width: 75%;
+
+    }
+
+}

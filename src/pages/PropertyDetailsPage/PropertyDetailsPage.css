@@ -161,3 +161,26 @@
 .booking-submit {
     margin-top: 10%;
 }
+
+@media (max-width:767px) { 
+    .property-details-page {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .property-details-left {
+        width: 100%;
+    }
+
+    .back-button {
+        width: 50%;
+    }
+
+    .main-details-container {
+        order: 1;
+    }
+
+    .property-desscription-container {
+        order: 2;
+    }
+}

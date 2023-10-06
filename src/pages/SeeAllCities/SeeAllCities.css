@@ -1,5 +1,5 @@
 .search-by-city-container{
-    padding: 5%;
+    margin: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,16 +15,32 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 5%;
     justify-content: center;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
+    width: 100%;
 }
 
 .city-button {
-    margin: 10%;
-    width: 30vh;
-    height: 10vh;
+    width: 1fr; 
+    height: 1fr;
+    padding: 10% 5%;
     background-color: transparent;
     border: 1px solid #CED3D8;
     border-radius: 12px;
     font-size: 28px;
     font-weight: bold;
+}
+
+@media (max-width:767px) { 
+    .city-buttons-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 20%;
+    }
+}
+
+@media (max-width:480px)  { 
+    .city-buttons-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 50%;
+        gap: 2%;
+    }
 }
