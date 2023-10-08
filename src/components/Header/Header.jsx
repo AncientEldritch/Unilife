@@ -69,7 +69,7 @@ function Header() {
       >
         <div className="modal-top">
           <h2 className="modal-title">Contact Us</h2>
-          <img src="../src/assets/mailbox.png" alt="icon of a mailbox" />
+          <img className="modal-image" src="../src/assets/mailbox.png" alt="icon of a mailbox" />
         </div>
         <p className="modal-text">Feel free to contact us if you have any questions. <br /> Looking forward to hear from you.</p>
         <form className="modal-form">

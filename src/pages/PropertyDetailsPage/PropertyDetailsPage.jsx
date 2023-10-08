@@ -86,7 +86,7 @@ function PropertyDetailsPage() {
       >
         <div className="modal-top">
           <h2 className="modal-title">Book a Viewing</h2>
-          <img src="../src/assets/booking.png" alt="icon of a mailbox" />
+          <img className="modal-image" src="../src/assets/booking.png" alt="icon of a mailbox" />
         </div>
         <p className="modal-text">{`${property?.address?.street}, ${property?.address?.city}, ${property?.address?.postcode}`}</p>
         <form className="modal-form">
@@ -169,7 +169,7 @@ function PropertyDetailsPage() {
                     <div className="detail-container">
                         <p className="detail-title">Price</p>
                         <div className="pulled-detail-container">
-                            <p>{property?.rent}</p>
+                            <p>£{property?.rent}</p>
                         </div>
                     </div>
                     <div className="detail-container">
@@ -187,10 +187,10 @@ function PropertyDetailsPage() {
                 </div>
             </div>
             <div className="details-button-container">
-                <button className="details-shortlist-button">
+                <button className="details-shortlist-button details-page-button">
                     <BsHeart /> &nbsp; Shortlist
                 </button>
-                <button className="details-book-viewing-button" onClick={openModal}>
+                <button className="details-book-viewing-button details-page-button" onClick={openModal}>
                     Book Viewing
                 </button>
             </div>
@@ -200,7 +200,7 @@ function PropertyDetailsPage() {
                         {property.bedroom_prices && Object.keys(property.bedroom_prices).map((bedroom, index) => (
                             <div key={index} className={`bedroom-price ${index !== property.bedroom_prices.length - 1 ? 'bottom-border' : ''}`}>
                                 <p className="bedroom-number">Bedroom {index+1}</p>
-                                <p className="individual-price">£{property.bedroom_prices[bedroom]}</p>
+                                <p className="individual-price">£{property.bedroom_prices[bedroom]} per week</p>
                             </div>
                         ))}
                     </div>

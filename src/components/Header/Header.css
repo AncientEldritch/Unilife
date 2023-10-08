@@ -39,7 +39,6 @@
 .ReactModalPortal {
     position: relative;
     z-index:  3;
-    
 }
 
 .modal-top {
@@ -114,6 +113,51 @@ label {
     display: none;
 }
 
+@media (max-width:767px) { 
+    .modal-text {
+        width: 95%;
+        font-size: 16px;
+        margin-top: 2%;
+    }
+    .modal-form {
+        flex-direction: column;
+       
+    }
+    .modal-left {
+        width: 95%;
+    }
+
+    .modal-right {
+        width: 95%;
+        margin-top: 5%;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    .input {
+        font-size: 20px;
+        height: 3vh;
+    }
+
+    .modal-top {
+       font-size: 28px;
+ }
+    .modal-image {
+        width: 20%;
+    }
+
+    .modal-submit {
+        font-size: 20px;
+        margin-top: 5%;
+    }
+    
+    .input-message {
+        height: 5vh;
+    }
+}
+
 @media (max-width:480px)  {
     .hamburger-menu {
         display: block;
@@ -132,5 +176,21 @@ label {
 
     .header-container {
         position: relative;
+    }
+
+    .modal-image  {
+        display: none;
+    }
+    
+    .modal-title {
+        font-size: 20px;
+        margin-bottom: 5%;
+    }
+    .input {
+        height: 3vh;
+        font-size: 16px;
+    }
+    .input-message {
+        height: 7vh;
     }
 }
