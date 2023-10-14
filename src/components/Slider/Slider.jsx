@@ -1,6 +1,7 @@
 import React from 'react'
 import './Slider.css'
 import { useLocation } from 'react-router-dom'
+import sliderBackground from "../../assets/cover-img.png"
 
 
 function Slider() {
@@ -27,7 +28,9 @@ function Slider() {
   return (
     
     <div className="slider-container">
-        <div className="slider-container-background">
+        <div className="slider-container-background" style={{ 
+      backgroundImage: `url(${sliderBackground})`
+    }}>
             <h1 className="slider-header">{sliderHeading}</h1>
             <p className="slider-text">{sliderText}</p>
         </div>
