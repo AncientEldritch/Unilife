@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 import './Footer.css'
 import axios from 'axios'
+import facebook from"../../assets/Facebook.png"
+import twitter from "../../assets/twitter.png"
+import instagram from "../../assets/instagram.png"
 
 function Footer() {
 
@@ -43,15 +46,15 @@ function Footer() {
                 <p className="footer-title">Let's Socialize</p>
                 <div className="socials-container">
                     <div className="socials">
-                        <img src="../src/assets/Facebook.png" alt="" className="socials-icon" />
+                        <img src={facebook} alt="" className="socials-icon" />
                         <p className="socials-text">Facebook</p>
                     </div>
                     <div className="socials">
-                        <img src="../src/assets/twitter.png" alt="twitter icon" className="socials-icon" />
+                        <img src={twitter} alt="twitter icon" className="socials-icon" />
                         <p className="socials-text">Twitter</p>
                     </div>
                     <div className="socials">
-                        <img src="../src/assets/instagram.png" alt="instagram logo" className="socials-icon" />
+                        <img src={instagram} alt="instagram logo" className="socials-icon" />
                         <p className="socials-text">Instagram</p>
                     </div>
                 </div>
