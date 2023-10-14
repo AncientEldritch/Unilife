@@ -2,6 +2,9 @@ import React from 'react'
 import './PropertyCard.css'
 import { Link } from 'react-router-dom'
 import { BsHouseDoor } from 'react-icons/bs'
+import bedLogo from "../../assets/bed.png"
+import bathtubLogo from "../../assets/bathtub.png"
+import locationLogo from "../../assets/location.png"
 
 function PropertyCard({property}) {
 
@@ -16,11 +19,11 @@ function PropertyCard({property}) {
             </div>
             <div className="bed-bath">
                 <div className="bed-bath-count">
-                    <img className="bed-and-bath-icon" src="../src/assets/bed.png" />
+                    <img className="bed-and-bath-icon" src={bedLogo} />
                     <p>{property.bedroom_count}</p>
                 </div>
                 <div className="bed-bath-count">
-                    <img className="bed-and-bath-icon" src="../src/assets/bathtub.png" />
+                    <img className="bed-and-bath-icon" src={bathtubLogo} />
                     <p>{property.bathroom_count}</p>
                 </div>
             </div>
@@ -31,7 +34,7 @@ function PropertyCard({property}) {
                     <p className="furnished">{property.furnished}</p>
                 </div>
                 <div className="address-container">
-                    <img className="location-icon" src="../src/assets/location.png" alt="location logo" />
+                    <img className="location-icon" src={locationLogo} alt="location logo" />
                     <p className="address">{property.address.street}, {property.address.city} {property.address.postcode}</p>
                 </div>
                 <Link to={`/property/${property?._id}`} className="house-details-link">

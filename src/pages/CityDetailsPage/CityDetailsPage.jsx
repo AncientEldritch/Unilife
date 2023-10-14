@@ -5,6 +5,7 @@ import Slider from '../../components/Slider/Slider'
 import axios from 'axios';
 import FilterForm  from "../../components/FilterForm/FilterForm"
 import PropertyCard from '../../components/PropertyCard/PropertyCard';
+import studentLogo from "../../assets/student-life.png"
 
 
 
@@ -119,7 +120,7 @@ useEffect(() => {
             <p>{currentCity.universities}</p>
           </div>
         </div>
-        <img src="../src/assets/student-life.png" alt="students sitting together and smiling" className="city-blurb-image" />
+        <img src={studentLogo} alt="students sitting together and smiling" className="city-blurb-image" />
       </div>
     </div>
   )

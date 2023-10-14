@@ -5,6 +5,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { BsHeart } from "react-icons/bs"
 import Modal from 'react-modal'
+import bookingLogo from "../../assets/booking.png"
+import blueBedLogo from "../../assets/blue-bed.png"
+import blueBathtubLogo from "../../assets/blue-bathtub.png"
 
 //Modal styling
 const customStyles = {
@@ -86,7 +89,7 @@ function PropertyDetailsPage() {
       >
         <div className="modal-top">
           <h2 className="modal-title">Book a Viewing</h2>
-          <img className="modal-image" src="../src/assets/booking.png" alt="icon of a mailbox" />
+          <img className="modal-image" src={bookingLogo} alt="icon of a mailbox" />
         </div>
         <p className="modal-text">{`${property?.address?.street}, ${property?.address?.city}, ${property?.address?.postcode}`}</p>
         <form className="modal-form">
@@ -149,14 +152,14 @@ function PropertyDetailsPage() {
                     <div className="detail-container">
                         <p className="detail-title">Bedrooms</p>
                         <div className="pulled-detail-container">
-                            <img className="details-icon" src="../src/assets/blue-bed.png" />
+                            <img className="details-icon" src={blueBedLogo} />
                             <p>{property?.bedroom_count}</p>
                         </div>
                     </div>
                     <div className="detail-container">
                         <p className="detail-title">Bathrooms</p>
                         <div className="pulled-detail-container">
-                            <img src="../src/assets/blue-bathtub.png" />
+                            <img src={blueBathtubLogo} />
                             <p>{property?.bathroom_count}</p>
                         </div>
                     </div>
